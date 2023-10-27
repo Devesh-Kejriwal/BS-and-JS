@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="inp">Enter a number: <input type="number" id="inp"></label>
+    <button onclick="reverse()">Submit</button>
+    <p id="out"></p>
+    <script>
+        
+        function reverse() {
+            var x = document.getElementById("inp").value;
+            var res = 0;
+            while (x > 0) {
+                var dig = x % 10;
+                res = res * 10 + dig;
+                x = Math.floor(x/10);
+            }
+            document.getElementById("out").textContent = `Reversed number: ${res}`;
+        }
+    </script>
+</body>
+
+</html>
